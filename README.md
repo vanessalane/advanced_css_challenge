@@ -3,6 +3,13 @@
 ## Task
 Create a professional portfolio from scratch, based on the mockup and user story.
 
+## Built With
+* HTML
+* CSS
+
+## Website
+https://vanessalane.github.io/advanced-css-challenge/
+
 ## User Story
 AS AN employer
 
@@ -31,9 +38,5 @@ THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 
-## Built With
-* HTML
-* CSS
-
-## Website
-https://vanessalane.github.io/advanced-css-challenge/
+## Mockup
+![Mockup Gif](assets/images/02-advanced-css-homework-demo.gif)
