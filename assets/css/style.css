@@ -84,3 +84,27 @@ header nav ul li a {
 .hero-subtitle h2{
     padding: 20px 35px;
 }
+
+/* Contents Styles */
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.information-article {
+    display: flex;
+    padding-bottom: 20px;
+}
+.information-header {
+    flex: 3;
+    text-align: right;
+    padding: 20px;
+    border-right: solid 1px;
+}
+.information-body {
+    flex: 7;
+    padding-left: 20px;
+}
