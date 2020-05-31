@@ -1,0 +1,58 @@
+/* Variables */
+:root {
+    --background-color: rgb(118, 147, 129);
+    --hero-background-color: #f5f1e9;
+    --hero-font-color: #rgb(51, 51, 51);
+    --font-color:#fff;
+    --body-font-family: "Roboto", sans-serif;
+    --header-font-family: "Playfair Display", serif;
+}
+/* Page Styles */
+* {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+body {
+    font-family: var(--body-font-family);
+    background: var(--background-color);
+    color: var(--font-color);
+}
+h1, h3 {
+    font-family: var(--header-font-family);
+}
+h1 {
+    font-size: 4vw;
+}
+h2 {
+    font-weight: bold;
+    font-size: 3.5vw;
+}
+h3 {
+    font-size: 3vw;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li a {
+    padding: 10px 15px;
+}
