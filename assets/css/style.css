@@ -25,7 +25,8 @@ body {
     font-family: var(--body-font-family);
     background: var(--background-color);
     color: var(--font-color);
-    font-size: 2vw;
+    font-size: 1.5vw;
+    line-height: 1.5;
 }
 h1, h3 {
     font-family: var(--header-font-family);
@@ -57,16 +58,17 @@ header nav ul {
     list-style: none;
 }
 header nav ul li a {
-    padding: 10px 15px;
+    padding: 15px;
 }
 
 /* Hero Styles */
 .hero {
-    height: 300px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
+    height: 300px;
+    max-height: 400px;
 }
 .hero::after {
     content:"";
@@ -82,7 +84,7 @@ header nav ul li a {
     z-index: -1;   
 }
 .hero-subtitle h2{
-    padding: 20px 35px;
+    padding: 20px;
 }
 
 /* Information Styles */
@@ -114,4 +116,77 @@ header nav ul li a {
 /* Contact Me Styles */
 .contact-me-links a {
     padding-right: 10px;
+}
+
+/* MEDIA QUERIES */
+/* Smaller Desktop Screens and Smaller */
+@media screen and (max-width: 980px) {
+}
+/* Tablets and Smaller */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size:  48px;
+    }
+    header nav {
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    body {
+        font-size: 16px;
+    }
+    .hero {
+        height: 200px;
+    }
+    .information {
+        margin: 24px auto;
+    }
+    .information-article {
+        flex-direction: column;
+    }
+    .information-header {
+        text-align: left;
+        border-bottom: 1px solid;
+        margin: 10px 0px;
+    }
+    .information-body {
+        border-left: 0px;
+    }
+}
+/* Mobile Phones and Smaller */
+@media screen and (max-width: 575px) {
+    header {
+        position: relative;
+        justify-content: center;
+    }
+    header nav ul li a  {
+        font-size: 14px;
+        padding: 10px;
+    }
+    body {
+        font-size: 14px;
+    }
+    .hero {
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .information {
+        margin: 20px auto;
+    }
+    .information-article {
+        padding-bottom: 10px;
+    }
+    .information-header, .information-body {
+        padding: 0px 10px;
+    }
+    .contact-me-links {
+        display: flex;
+        flex-direction: column;
+    }
 }
