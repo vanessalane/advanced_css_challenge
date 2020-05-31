@@ -85,26 +85,33 @@ header nav ul li a {
     padding: 20px 35px;
 }
 
-/* Contents Styles */
+/* Information Styles */
 .information {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 50px auto;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 .information-article {
     display: flex;
+    flex-basis: 100%;
     padding-bottom: 20px;
 }
 .information-header {
-    flex: 3;
     text-align: right;
-    padding: 20px;
-    border-right: solid 1px;
+    padding: 0px 20px;
+    flex-basis: 25%;
 }
 .information-body {
-    flex: 7;
-    padding-left: 20px;
+    padding: 0px 20px;
+    border-left: solid 1px;
+    flex-basis: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* Contact Me Styles */
+.contact-me-links a {
+    padding-right: 10px;
 }
