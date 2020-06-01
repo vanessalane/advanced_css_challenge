@@ -8,7 +8,7 @@ Create a professional portfolio from scratch, based on the mockup and user story
 * CSS
 
 ## Website
-https://vanessalane.github.io/advanced-css-challenge/
+https://vanessalane.github.io/advanced_css_challenge/
 
 ## User Story
 AS AN employer
