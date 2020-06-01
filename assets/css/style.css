@@ -5,71 +5,71 @@
     --font-color:#fff;
     --body-font-family: "Roboto", sans-serif;
     --header-font-family: "Playfair Display", serif;
-}
-/* Page Styles */
-* {
+  }
+  /* Page Styles */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-a {
+  }
+  a {
     text-decoration: none;
     color: var(--font-color);
-}
-a:hover {
+  }
+  a:hover {
     cursor: pointer;
     text-decoration: underline;
-}
-body {
+  }
+  body {
     font-family: var(--body-font-family);
     background: var(--background-color);
     color: var(--font-color);
     font-size: 1.5vw;
     line-height: 1.5;
-}
-h1, h3 {
+  }
+  h1, h3 {
     font-family: var(--header-font-family);
-}
-h1 {
+  }
+  h1 {
     font-size: 5vw;
-}
-h2 {
+  }
+  h2 {
     font-weight: bold;
     font-size: 4vw;
-}
-h3 {
+  }
+  h3 {
     font-size: 3vw;
-}
-
-/* Header Styles */
-header {
+  }
+  
+  /* Header Styles */
+  header {
     padding: 20px 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-header nav ul {
+  }
+  header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-}
-header nav ul li a {
+  }
+  header nav ul li a {
     padding: 15px;
-}
-
-/* Hero Styles */
-.hero {
+  }
+  
+  /* Hero Styles */
+  .hero {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
     height: 300px;
     max-height: 400px;
-}
-.hero::after {
+  }
+  .hero::after {
     content:"";
     opacity: 0.5;
     background-image: url("../images/hero_image.jpg");
@@ -81,30 +81,30 @@ header nav ul li a {
     right: 0;
     position: absolute;
     z-index: -1;   
-}
-.hero-subtitle h2{
+  }
+  .hero-subtitle h2{
     padding: 20px;
     font-size: 4vw;
-}
-
-/* Information Styles */
-.information {
+  }
+  
+  /* Information Styles */
+  .information {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 50px auto;
-}
-.information-article {
+  }
+  .information-article {
     display: flex;
     flex-basis: 100%;
     padding-bottom: 20px;
-}
-.information-header {
+  }
+  .information-header {
     text-align: right;
     padding: 0px 20px;
     flex-basis: 25%;
-}
-.information-body {
+  }
+  .information-body {
     padding: 20px;
     border-left: solid 1px;
     flex-basis: 75%;
@@ -112,40 +112,41 @@ header nav ul li a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-/* Work Styles */
-.project-container {
+  }
+  
+  /* Work Styles */
+  .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 5fr);
     grid-gap: 10px;
-}
-.project {
+    grid-auto-flow: dense;
+  }
+  .project {
     display: flex;
-}
-.project a img {
+  }
+  .project a img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-.horiseon {
+  }
+  .horiseon {
     grid-column: 1/ span 2;
     grid-row: 1/ span 2;
-}
-
-/* Contact Me Styles */
-.contact-me-links {
+  }
+  
+  /* Contact Me Styles */
+  .contact-me-links {
     display: flex;
     flex-basis: 100%;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-}
-
-/* MEDIA QUERIES */
-/* Smaller Desktop Screens and Smaller */
-@media screen and (max-width: 980px) {
+  }
+  
+  /* MEDIA QUERIES */
+  /* Smaller Desktop Screens and Smaller */
+  @media screen and (max-width: 980px) {
     header h1 {
         font-size:  48px;
     }
@@ -161,11 +162,11 @@ header nav ul li a {
     body {
         font-size: 16px;
     }
-}
-/* Tablets and Smaller */
-@media screen and (max-width: 768px) {
+  }
+  /* Tablets and Smaller */
+  @media screen and (max-width: 768px) {
     header {
-        justify-content: center;
+        position: relative;
     }
     header h1 {
         font-size: 36px;
@@ -193,10 +194,23 @@ header nav ul li a {
         border-left: 0px;
         justify-content: space-around;
     }
-}
-/* Mobile Phones and Smaller */
-@media screen and (max-width: 575px) {
+    .project-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+    .project a img {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .horiseon {
+        grid-column: 1/ span 1;
+    }
+  /* Mobile Phones and Smaller */
+  @media screen and (max-width: 575px) {
     header {
+        justify-content: center;
         position: relative;
     }
     header nav ul li a  {
@@ -223,4 +237,9 @@ header nav ul li a {
         flex-direction: column;
         align-items: center;
     }
-}
+    .project a img {
+        height: 100px;
+        width: 100%;
+        object-fit: cover;
+    }
+  }
