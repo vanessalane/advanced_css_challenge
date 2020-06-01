@@ -118,17 +118,31 @@
   .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 5fr);
-    grid-gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: dense;
+    grid-gap: 10px;
   }
   .project {
-    display: flex;
+    position: relative;
   }
   .project a img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    display: block;
+    opacity: 0.5;
+  }
+  .project a img:hover {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  .project-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px;
+      margin: 10px;
+      background-color: var(--background-color);
   }
   .horiseon {
     grid-column: 1/ span 2;
@@ -203,9 +217,13 @@
         height: 150px;
         width: 100%;
         object-fit: cover;
+        opacity: 1;
     }
     .horiseon {
         grid-column: 1/ span 1;
+    }
+    .project-title {
+        width: 25%;
     }
   /* Mobile Phones and Smaller */
   @media screen and (max-width: 575px) {
@@ -241,5 +259,8 @@
         height: 100px;
         width: 100%;
         object-fit: cover;
+    }
+    .project-title {
+        width: 50%;
     }
   }
